@@ -2,9 +2,9 @@
 Type = Path
 Operation = Install
 Operation = Upgrade
-Target = opt/discord/resources/*
+Target = opt/discord-canary/resources/*
 
 [Action]
 Description = Replacing offcial asar with openasar...
 When = PostTransaction
-Exec = /usr/share/libalpm/scripts/post-upgrade-discord
+Exec = /usr/share/libalpm/scripts/post-upgrade-discord-canary

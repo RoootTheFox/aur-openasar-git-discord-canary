@@ -9,15 +9,15 @@ url="https://github.com/GooseMod/OpenAsar"
 license=('MIT')
 depends=('unzip')
 makedepends=('git' 'asar' 'nodejs')
-optdepends=('discord')
+optdepends=('discord-canary')
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
-source=("git+${url}.git" "post-upgrade-discord" "openasar-git-discord-upgrade.hook" "pre-remove-discord" "openasar-git-discord-remove.hook")
+source=("git+${url}.git" "post-upgrade-discord-canary" "openasar-git-discord-upgrade.hook" "pre-remove-discord-canary" "openasar-git-discord-remove.hook")
 sha1sums=('SKIP'
-          '7bc291ac6ba295ed707daeabcabb42da7b4ceedb'
-          '275d5228ceb7c5d39c3d846a898b98624cbef02b'
-          '99664e9a0b07f43052cb75d5ccdb8b5123134fbc'
-          '9fa086af362a64a4b0a7f01c4235d3b4fdacad06')
+          '03ec1b9a69ff26f37dc7d0925410635b53bbfad7'
+	  '2d77642e2349468a38b91b1f5ef58e4359e24bab'
+	  '99664e9a0b07f43052cb75d5ccdb8b5123134fbc'
+	  'ea36b446b5daae3f38f1ad66f9fe1e6ce51b351e'
 install="$pkgname.install"
 
 pkgver() {
@@ -26,8 +26,8 @@ pkgver() {
 }
 
 package() {
-    install -Dm755 "${srcdir}/post-upgrade-discord" -t "${pkgdir}/usr/share/libalpm/scripts/"
-    install -Dm755 "${srcdir}/pre-remove-discord" -t "${pkgdir}/usr/share/libalpm/scripts/"
+    install -Dm755 "${srcdir}/post-upgrade-discord-canary" -t "${pkgdir}/usr/share/libalpm/scripts/"
+    install -Dm755 "${srcdir}/pre-remove-discord-canary" -t "${pkgdir}/usr/share/libalpm/scripts/"
     install -Dm644 "${srcdir}/openasar-git-discord-remove.hook" -t "${pkgdir}/usr/share/libalpm/hooks/"
     install -Dm644 "${srcdir}/openasar-git-discord-upgrade.hook" -t "${pkgdir}/usr/share/libalpm/hooks/"
     cd "${srcdir}/OpenAsar"
