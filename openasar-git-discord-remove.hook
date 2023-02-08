@@ -6,4 +6,4 @@ Target = discord
 [Action]
 Description = Reverting to the offcial asar...
 When = PreTransaction
-Exec = /usr/share/libalpm/scripts/pre-remove-discord
+Exec = /usr/share/libalpm/scripts/pre-remove-discord-canary

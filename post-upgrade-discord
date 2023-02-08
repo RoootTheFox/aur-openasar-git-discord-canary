@@ -1,3 +1,0 @@
-#!/bin/bash
-mv /opt/discord/resources/app.asar /opt/discord/resources/app.asar.backup
-install -Dm 644 /opt/openasar-git/app.asar /opt/discord/resources/app.asar
