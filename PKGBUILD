@@ -18,8 +18,8 @@ sha1sums=('SKIP'
 	  '2d77642e2349468a38b91b1f5ef58e4359e24bab'
 	  '99664e9a0b07f43052cb75d5ccdb8b5123134fbc'
 	  'ea36b446b5daae3f38f1ad66f9fe1e6ce51b351e'
+)
 install="$pkgname.install"
-
 pkgver() {
     cd "${srcdir}/OpenAsar"
     printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
