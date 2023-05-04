@@ -4,6 +4,6 @@ Operation = Remove
 Target = discord
 
 [Action]
-Description = Reverting to the offcial asar...
+Description = Reverting to the official asar...
 When = PreTransaction
 Exec = /usr/share/libalpm/scripts/pre-remove-discord-canary

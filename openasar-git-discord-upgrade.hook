@@ -5,6 +5,6 @@ Operation = Upgrade
 Target = opt/discord-canary/resources/*
 
 [Action]
-Description = Replacing offcial asar with openasar...
+Description = Replacing official asar with openasar...
 When = PostTransaction
 Exec = /usr/share/libalpm/scripts/post-upgrade-discord-canary
